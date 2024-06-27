@@ -1,0 +1,7 @@
+---
+title: "Sources"
+format: html
+---
+
+My data was from https://www.kaggle.com/datasets/alistairking/nuclear-energy-datasets. I Deleted all but the name, latitude, longitude, pimary_fuel, and estimated_gwh_power_generation_2017 columns, along with any rows with missing values. I also converted it to a JSON file.
+

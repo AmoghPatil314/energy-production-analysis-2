@@ -1,0 +1,182 @@
+---
+title: "Home"
+author: "Amogh Patil"
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+---
+Power. We all need it, whether we want it or not. But, what makes a good power plant? Is it it's fuel type, or energy generation, or even name? How would we get this data? 
+
+Well, this data can be sourced from a Kaggle dataset that tracked the coordinates, power generation, names, and some other variables. 
+
+Unnecessary columns were removed, and they were then used to map the plants to areas of the world. 
+
+Today, we can see that much of the world's top power generation comes from hydro power plants, although there are other high power generation types of plants.
+```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(tidyverse)
+library(plotly)
+library(maps)
+library(jsonlite)
+library(scales)
+library(ggbeeswarm)
+library(viridis)
+```
+
+```{r data-processing, echo=FALSE}
+# Load and process data
+power_data <- read_csv("./data/global_power_plant_database.csv",show_col_types=FALSE)
+
+# Convert data to JSON for use in JavaScript
+power_data_json <- jsonlite::toJSON(
+  power_data %>% 
+    select(name, latitude, longitude, primary_fuel, estimated_generation_gwh_2017),
+  dataframe = "rows"
+)
+
+# Get unique fuel types
+fuel_types <- unique(power_data$primary_fuel)
+```
+
+## Power Plant Distribution
+
+This map show the locations, names, and power generation capabitities of each power plant in this data set. This map can be used to analyze the site factors for a good power plant.
+
+Use the inputs below to filter the data and update the map:
+
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+// Load the data
+var powerData = null;
+document.addEventListener('DOMContentLoaded', function() {
+  powerData = `r power_data_json`;  // Access data after processing
+  updatePlot();
+});
+
+// Function to filter data
+function filterData(percentage, selectedFuels) {
+  var threshold = percentile(powerData.map(d => d.estimated_generation_gwh_2017), 1 - parseInt(percentage, 10) / 100);
+  console.log("Threshold:", threshold);
+  console.log("Before length", powerData.length);
+  return powerData.filter(d => 
+     (selectedFuels.includes('All') || selectedFuels.includes(d.primary_fuel)) &&
+     d.estimated_generation_gwh_2017 > threshold
+  );
+}
+
+// Function to calculate percentile
+function percentile(arr, p) {
+  if (arr.length === 0) return 0;
+  arr = arr.filter(val => val !== null && !isNaN(val));
+  arr = arr.sort((a, b) => a - b);
+  const index = p * (arr.length - 1);
+  const lower = Math.floor(index);
+  const upper = lower + 1;
+  const weight = index % 1;
+  if (upper >= arr.length) return arr[lower];
+  return arr[lower] * (1 - weight) + arr[upper] * weight;
+}
+
+var layout = {
+  title: 'Top Power Plants in Energy Production across the world',
+  geo: {
+    showland: true,
+    showcountries: true,
+    showocean: true,
+    oceancolor: 'lightblue',
+    projection: {type: 'natural earth'}
+  }
+};
+  
+// Function to create plot with data length check
+function createPlot(data) {
+  console.log("After length",data.length)
+  var trace = {
+    // Your trace definition using data (ensure filtered data)
+    type: 'scattergeo',
+    mode: 'markers',
+    lon: data.map(d => d.longitude),
+    lat: data.map(d => d.latitude),
+    text: data.map(d => d.name + '<br>' + d.primary_fuel + '<br>' + d.estimated_generation_gwh_2017),
+    marker: {
+      size: 1,
+      opacity: 0.8,
+      color: data.map(d => d.primary_fuel),
+      colorscale: 'Viridis'
+    }
+  };
+  Plotly.newPlot('plotly-div', [trace], layout);
+}
+
+// Update plot with filtered data check
+function updatePlot() {
+  if (powerData) {
+    var percentage = document.getElementById('percentage').value;
+    var fuelTypes = Array.from(document.getElementById('fuel_type').selectedOptions).map(option => option.value);
+
+    var filteredData = filterData(percentage, fuelTypes);
+    createPlot(filteredData);
+  }
+}
+
+// Initial plot render
+document.addEventListener('DOMContentLoaded', function() {
+  updatePlot();
+});
+
+// Add event listener to percentage input (optional, already in previous code)
+//document.getElementById("percentage").addEventListener("change", updatePlot);
+</script>
+
+<input type="number" id="percentage" value="10" min="0" max="100">
+<select id="fuel_type" multiple>
+  <option value="All" selected>All</option>
+  `r paste0("<option value='", fuel_types, "'>", fuel_types, "</option>", collapse = "\n")`
+</select>
+<button onclick="updatePlot()">Update Plot</button>
+<div id="plotly-div"></div>
+
+```{r, echo=FALSE,warning=FALSE}
+cat("\n\n\n")
+```
+As we can see, there are many power plants in the world. This next plot illustrates that, by showing how many of each type there are.
+
+```{r, echo=FALSE,warning=FALSE}
+
+lamenting<-power_data|>
+  ggplot(aes(x=primary_fuel,fill=primary_fuel))+
+  geom_bar(color="black")+
+  labs(title= NULL, y= NULL, x= NULL,fill="Type")+
+  theme(axis.ticks = element_blank(),
+        axis.text.x = element_blank(),
+        legend.position = "bottom")+
+  scale_y_continuous(labels=scales::comma_format())
+
+#plot_ly(power_data,x=~primary_fuel,fill=~primary_fuel,type='histogram')|>
+    #layout(title = "Histogram of Discrete X Values", 
+         #xaxis = list(title = "Fuel type"), 
+         #yaxis = list(title = "Count"))
+ggplotly(lamenting)
+cat("\n\n\n")
+```
+We can also see what plants generate the most power, as illustrated by the next plot:
+
+```{r,echo=FALSE,warning=FALSE}
+cheezit<-power_data|>
+  ggplot(aes(x=estimated_generation_gwh_2017,y=primary_fuel,color=estimated_generation_gwh_2017))+
+  geom_quasirandom(alpha = 0.7, size = 0.5,orientation = 'y')+
+  scale_color_viridis_c(option = "plasma", direction = -1)+
+  labs(title= NULL, y= NULL, x= NULL,color= NULL)+
+  theme(axis.ticks = element_blank(),
+        axis.text.x = element_blank(),
+        legend.position = "bottom")+
+  scale_x_continuous(labels=scales::comma_format())
+ggplotly(cheezit)
+```
+
+
+  
