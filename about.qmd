@@ -1,9 +1,5 @@
 ---
-title: "About"
+title: "Translator Company"
 ---
 
-Hello! I am 9th grade student at Blaine High School in Minnesota. My github is https://github.com/AmoghPatil314, and my email is amogh@arjunp.com
-
-This project uses client side loading to filter out certain types of fuel, which can be used to analyze patterns in the world.
-
-This project was created as a part of Kane’s Data Science Bootcamp (https://bootcamp.davidkane.info/).
+Helps translate stuff

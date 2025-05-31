@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "(from this point onward, the use of “jargon words” is reserved for words of any kind/language that the user cannot currently understand)\nHere at Jargon Co., we aim to provide top-notch service to our customers. Below, you can see our current products:"
+  },
+  {
+    "objectID": "index.html#power-plant-distribution",
+    "href": "index.html#power-plant-distribution",
+    "title": "Home",
+    "section": "Power Plant Distribution",
+    "text": "Power Plant Distribution\nThis map show the locations, names, and power generation capabitities of each power plant in this data set. This map can be used to analyze the site factors for a good power plant.\nUse the inputs below to filter the data and update the map:\n\n\n\n All Book Watch Earpods Chip  Update Plot\n\n\n\nAs we can see, there are many power plants in the world. This next plot illustrates that, by showing how many of each type there are.\nWe can also see what plants generate the most power, as illustrated by the next plot:\n\n\nwgl \n  1 \n\n\n\n\n\n\nwgl \n  2 \n\n\n\n\n\n\nwgl \n  3 \n\n\n\n\n\n\nwgl \n  4"
+  },
+  {
+    "objectID": "sources.html",
+    "href": "sources.html",
+    "title": "Sources",
+    "section": "",
+    "text": "My data was from https://www.kaggle.com/datasets/alistairking/nuclear-energy-datasets. I Deleted all but the name, latitude, longitude, pimary_fuel, and estimated_gwh_power_generation_2017 columns, along with any rows with missing values. I also converted it to a JSON file."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hello! I am 9th grade student at Blaine High School in Minnesota. My github is https://github.com/AmoghPatil314, and my email is amogh@arjunp.com\nThis project uses client side loading to filter out certain types of fuel, which can be used to analyze patterns in the world.\nThis project was created as a part of Kane’s Data Science Bootcamp (https://bootcamp.davidkane.info/)."
+  },
+  {
+    "objectID": "index.html#the-book",
+    "href": "index.html#the-book",
+    "title": "Home",
+    "section": "The Book",
+    "text": "The Book\nA book that contains all currently known and used jargon words. Price:$[price]. Contains a subscription package - for an extra $[price] a month, you can have a live translator constantly o call with you, whenever you may require it!\n\n\nwgl \n  1"
+  },
+  {
+    "objectID": "index.html#the-watch",
+    "href": "index.html#the-watch",
+    "title": "Home",
+    "section": "The Watch",
+    "text": "The Watch\nA Watch that activly translates jargon words. Price:$[price]\n\n\nwgl \n  2"
+  },
+  {
+    "objectID": "index.html#the-earpiece",
+    "href": "index.html#the-earpiece",
+    "title": "Home",
+    "section": "The Earpiece",
+    "text": "The Earpiece\nA Earpiece that actively translates and speaks jargon words to you. Price:$[price]\n\n\nwgl \n  3"
+  },
+  {
+    "objectID": "index.html#the-chip",
+    "href": "index.html#the-chip",
+    "title": "Home",
+    "section": "The Chip",
+    "text": "The Chip\nA Chip that is surgically implanted into your brain/scalp. Actively translates jargon words, along with providing definitions, meanings, and helping translate your own words into jargon. Price:$[price] not including surgery. Surgery costs depend per location.\n\n\nwgl \n  4"
+  },
+  {
+    "objectID": "index.html#map",
+    "href": "index.html#map",
+    "title": "Home",
+    "section": "Map",
+    "text": "Map\nLocations of different Jargon Co. products in the world. Can be filtered.\n\n\n\n All Book Watch Earpods Chip  Update Plot\n\n\n\n\n\n\n\nAs we can see, there are many power plants in the world. This next plot illustrates that, by showing how many of each type there are."
+  }
+]

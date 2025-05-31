@@ -6,14 +6,13 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+engine: knitr
 ---
-Power. We all need it, whether we want it or not. But, what makes a good power plant? Is it it's fuel type, or energy generation, or even name? How would we get this data? 
+(from this point onward, the use of "jargon words" is reserved for words of any kind/language that the user cannot currently understand)
 
-Well, this data can be sourced from a Kaggle dataset that tracked the coordinates, power generation, names, and some other variables. 
+Here at Jargon Co., we aim to provide top-notch service to our customers. Below, you can see our current products:
 
-Unnecessary columns were removed, and they were then used to map the plants to areas of the world. 
-
-Today, we can see that much of the world's top power generation comes from hydro power plants, although there are other high power generation types of plants.
+# Products
 ```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(tidyverse)
@@ -23,30 +22,107 @@ library(jsonlite)
 library(scales)
 library(ggbeeswarm)
 library(viridis)
+library(rgl)
+
+knitr::opts_chunk$set(rgl = TRUE)
+
+# This line disables the external window and prepares for WebGL embedding
+knitr::knit_hooks$set(rgl = rgl::hook_webgl)
+
 ```
 
 ```{r data-processing, echo=FALSE}
 # Load and process data
-power_data <- read_csv("./data/global_power_plant_database.csv",show_col_types=FALSE)
+power_data <- read_csv("./data/jargon_database.csv",show_col_types=FALSE)
 
 # Convert data to JSON for use in JavaScript
 power_data_json <- jsonlite::toJSON(
   power_data %>% 
-    select(name, latitude, longitude, primary_fuel, estimated_generation_gwh_2017),
+    select(type, latitude, longitude),
   dataframe = "rows"
 )
-
+# select(name, latitude, longitude, primary_fuel, estimated_generation_gwh_2017),
 # Get unique fuel types
-fuel_types <- unique(power_data$primary_fuel)
+types <- unique(power_data$type)
 ```
 
-## Power Plant Distribution
+## The Book
+A book that contains all currently known and used jargon words.
+Price:$[price]. 
+Contains a subscription package - for an extra $[price] a month, you can have a live translator constantly o call with you, whenever you may require it!
 
-This map show the locations, names, and power generation capabitities of each power plant in this data set. This map can be used to analyze the site factors for a good power plant.
+```{r, echo = FALSE, warning = FALSE}
+# Load package
+open3d()
 
-Use the inputs below to filter the data and update the map:
+# Load your CAD model file (e.g. STL or OBJ)
+# Replace 'your_model.stl' with the path to your model file
+book <- readOBJ("./data/Dictionary.obj")
+
+# a
+# Display model in 3D viewer
+shade3d(book, color = "steelblue")
 
 
+# Export to standalone HTML (interactive in any browser)
+invisible(rglwidget())
+
+cat("\n\n\n")
+
+```  
+
+## The Watch
+A Watch that activly translates jargon words. 
+Price:$[price]
+
+
+```{r, echo = FALSE, warning = FALSE}
+watch <- readOBJ("./data/watch.obj")
+open3d()
+shade3d(watch, color = "cyan4")
+invisible(rglwidget())
+
+cat("\n\n\n")
+
+```
+
+## The Earpiece
+A Earpiece that actively translates and speaks jargon words to you. 
+Price:$[price]
+
+
+```{r, echo = FALSE, warning = FALSE}
+earpiece <- readOBJ("./data/earpiece.obj")
+open3d()
+shade3d(earpiece, color = "darkorchid3")
+invisible(rglwidget())
+
+cat("\n\n\n")
+
+```
+
+## The Chip
+A Chip that is surgically implanted into your brain/scalp. Actively translates jargon words, along with providing definitions, meanings, and helping translate your own words into jargon. 
+Price:$[price] not including surgery. 
+Surgery costs depend per location.
+
+```{r, echo = FALSE, warning = FALSE}
+chip <- readOBJ("./data/chip.obj")
+open3d()
+shade3d(chip, color = "deeppink3")
+invisible(rglwidget())
+
+cat("\n\n\n")
+
+```
+
+# Demographics
+
+At Jargon Co., we rely on providing fast, customized and personalized service to our customers. To actuate this, we collect (simple) demographics about our customers, while also maintaining their privacy. The results are complied below:
+
+## Map
+
+Locations of different Jargon Co. products in the world. Can be filtered.
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>
@@ -58,18 +134,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Function to filter data
-function filterData(percentage, selectedFuels) {
-  var threshold = percentile(powerData.map(d => d.estimated_generation_gwh_2017), 1 - parseInt(percentage, 10) / 100);
+function filterData(selectedFuels) {
+  /* var threshold = percentile(powerData.map(d => d.estimated_generation_gwh_2017), 1 - parseInt(percentage, 10) / 100);
   console.log("Threshold:", threshold);
-  console.log("Before length", powerData.length);
+  console.log("Before length", powerData.length); */
   return powerData.filter(d => 
-     (selectedFuels.includes('All') || selectedFuels.includes(d.primary_fuel)) &&
-     d.estimated_generation_gwh_2017 > threshold
+     (selectedFuels.includes('All') || selectedFuels.includes(d.type))
   );
 }
 
 // Function to calculate percentile
-function percentile(arr, p) {
+/*function percentile(arr, p) {
   if (arr.length === 0) return 0;
   arr = arr.filter(val => val !== null && !isNaN(val));
   arr = arr.sort((a, b) => a - b);
@@ -79,10 +154,10 @@ function percentile(arr, p) {
   const weight = index % 1;
   if (upper >= arr.length) return arr[lower];
   return arr[lower] * (1 - weight) + arr[upper] * weight;
-}
+}*/
 
 var layout = {
-  title: 'Top Power Plants in Energy Production across the world',
+  title: 'Product sales across world',
   geo: {
     showland: true,
     showcountries: true,
@@ -101,7 +176,7 @@ function createPlot(data) {
     mode: 'markers',
     lon: data.map(d => d.longitude),
     lat: data.map(d => d.latitude),
-    text: data.map(d => d.name + '<br>' + d.primary_fuel + '<br>' + d.estimated_generation_gwh_2017),
+    text: data.map(d => d.type + '<br>'),
     marker: {
       size: 1,
       opacity: 0.8,
@@ -115,10 +190,10 @@ function createPlot(data) {
 // Update plot with filtered data check
 function updatePlot() {
   if (powerData) {
-    var percentage = document.getElementById('percentage').value;
-    var fuelTypes = Array.from(document.getElementById('fuel_type').selectedOptions).map(option => option.value);
+    //var percentage = document.getElementById('percentage').value;
+    var fuelTypes = Array.from(document.getElementById('types').selectedOptions).map(option => option.value);
 
-    var filteredData = filterData(percentage, fuelTypes);
+    var filteredData = filterData(fuelTypes);
     createPlot(filteredData);
   }
 }
@@ -132,10 +207,10 @@ document.addEventListener('DOMContentLoaded', function() {
 //document.getElementById("percentage").addEventListener("change", updatePlot);
 </script>
 
-<input type="number" id="percentage" value="10" min="0" max="100">
-<select id="fuel_type" multiple>
+<!-- <input type="number" id="percentage" value="10" min="0" max="100"> -->
+<select id="types" multiple>
   <option value="All" selected>All</option>
-  `r paste0("<option value='", fuel_types, "'>", fuel_types, "</option>", collapse = "\n")`
+  `r paste0("<option value='", types, "'>", types, "</option>", collapse = "\n")`
 </select>
 <button onclick="updatePlot()">Update Plot</button>
 <div id="plotly-div"></div>
@@ -147,36 +222,37 @@ As we can see, there are many power plants in the world. This next plot illustra
 
 ```{r, echo=FALSE,warning=FALSE}
 
-lamenting<-power_data|>
-  ggplot(aes(x=primary_fuel,fill=primary_fuel))+
-  geom_bar(color="black")+
-  labs(title= NULL, y= NULL, x= NULL,fill="Type")+
-  theme(axis.ticks = element_blank(),
-        axis.text.x = element_blank(),
-        legend.position = "bottom")+
-  scale_y_continuous(labels=scales::comma_format())
+#lamenting<-power_data|>
+#  ggplot(aes(x=primary_fuel,fill=primary_fuel))+
+#  geom_bar(color="black")+
+#  labs(title= NULL, y= NULL, x= NULL,fill="Type")+
+#  theme(axis.ticks = element_blank(),
+#        axis.text.x = element_blank(),
+#        legend.position = "bottom")+
+#  scale_y_continuous(labels=scales::comma_format())
 
 #plot_ly(power_data,x=~primary_fuel,fill=~primary_fuel,type='histogram')|>
     #layout(title = "Histogram of Discrete X Values", 
          #xaxis = list(title = "Fuel type"), 
          #yaxis = list(title = "Count"))
-ggplotly(lamenting)
+#ggplotly(lamenting)
 cat("\n\n\n")
 ```
-We can also see what plants generate the most power, as illustrated by the next plot:
+
 
 ```{r,echo=FALSE,warning=FALSE}
-cheezit<-power_data|>
-  ggplot(aes(x=estimated_generation_gwh_2017,y=primary_fuel,color=estimated_generation_gwh_2017))+
-  geom_quasirandom(alpha = 0.7, size = 0.5,orientation = 'y')+
-  scale_color_viridis_c(option = "plasma", direction = -1)+
-  labs(title= NULL, y= NULL, x= NULL,color= NULL)+
-  theme(axis.ticks = element_blank(),
-        axis.text.x = element_blank(),
-        legend.position = "bottom")+
-  scale_x_continuous(labels=scales::comma_format())
-ggplotly(cheezit)
+#cheezit<-power_data|>
+#  ggplot(aes(x=estimated_generation_gwh_2017,y=primary_fuel,color=estimated_generation_gwh_2017))+
+#  geom_quasirandom(alpha = 0.7, size = 0.5,orientation = 'y')+
+#  scale_color_viridis_c(option = "plasma", direction = -1)+
+#  labs(title= NULL, y= NULL, x= NULL,color= NULL)+
+#  theme(axis.ticks = element_blank(),
+#        axis.text.x = element_blank(),
+#        legend.position = "bottom")+
+#  scale_x_continuous(labels=scales::comma_format())
+#ggplotly(cheezit)
 ```
 
 
-  
+
+

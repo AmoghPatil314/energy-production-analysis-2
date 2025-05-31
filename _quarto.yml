@@ -2,13 +2,14 @@ project:
   type: website
 
 website:
-  title: "Energy Production Analysis"
+  title: "Jargon Company"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
       - sources.qmd
+      - ent_companny.qmd
 
 format:
   html:
