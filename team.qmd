@@ -18,9 +18,10 @@ knitr::include_graphics("./data/Kevin_image.jpg")
 ### Oliver Doyle
 ***Financial Officer, Product Design Leader***
 ```{r, echo=FALSE, warning=FALSE}
-#knitr::include_graphics("images/histogram.png")
+knitr::include_graphics("./data/oliver_image.png")
 ```
 
+Oliver used to a fake boy and with the help of jargon company he became a real boy thanks to our translation power.
 
 :::
 ::: {.g-col-4}

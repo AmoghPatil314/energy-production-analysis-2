@@ -1,1 +1,1 @@
-Sitemap: https://e136fa76-a8c4-418c-adad-9d0942635dc4.netlify.app/sitemap.xml
+Sitemap: https://slyproton.quarto.pub/jargon-company/sitemap.xml
