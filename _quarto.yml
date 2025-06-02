@@ -15,8 +15,8 @@ website:
 
 format:
   html:
-    theme: [cosmo]
-    css: styles.css
+    theme: [cyborg]
+#    css: styles.css
     toc: true
 
 
