@@ -1,1 +1,43 @@
-/* css styles */
+/* styles.css */
+
+/* Overall page background and text */
+body {
+    background-color: #0a0f2c;  /* dark navy */
+    color: white;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+  }
+  
+  /* Links */
+  a {
+    color: #00ffff;
+  }
+  
+  a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Code blocks */
+  pre, code {
+    background-color: #001428;
+    color: #ffffff;
+  }
+  
+  /* Navbar override */
+  .navbar {
+    background-color: black !important;
+    border-bottom: 2px solid #333;
+  }
+  
+  .navbar .nav-link,
+  .navbar-brand {
+    color: white !important;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #00ffff !important;
+  }
+  
