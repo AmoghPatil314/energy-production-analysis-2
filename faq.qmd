@@ -1,10 +1,8 @@
 ---
-title: "Entertainment Company"
+title: "FAQ"
 format: html
 engine: knitr
 ---
-
-# FAQ
 
 Welcome to our FAQ! Here we will answer some of our most popular questions:
 
@@ -163,3 +161,9 @@ A:
 
 </details>
 
+<details>
+<summary>Q: Github for this website?</summary>
+
+A: <a href="https://github.com/AmoghPatil314/jargon-company" target="_blank">Github</a>
+
+</details>
