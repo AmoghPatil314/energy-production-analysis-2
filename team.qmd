@@ -1,0 +1,78 @@
+---
+title: "Meet Our Team"
+format: html
+engine: knitr
+---
+
+::: {.grid}
+::: {.g-col-4}
+### Dung (Kevin) Nguyen
+***CEO, Marketing Leader***
+```{r, echo=FALSE, warning=FALSE}
+knitr::include_graphics("./data/Kevin_image.jpg")
+```
+
+
+:::
+::: {.g-col-4}
+### Oliver Doyle
+***Financial Officer, Product Design Leader***
+```{r, echo=FALSE, warning=FALSE}
+#knitr::include_graphics("images/histogram.png")
+```
+
+
+:::
+::: {.g-col-4}
+### Amogh Patil
+***Manufacturing Supervisor, Operations Director, Low Level “Wage Slave”, Website Designer***
+```{r, echo=FALSE, warning=FALSE}
+knitr::include_graphics("./data/amogh_image.jpg")
+```
+
+Born in southern Columbus, Ohio. Went to MIT before deciding to travel. Got hired by Jargon Co. Forced to become a wage slave. Work for a salary of $-1 a day for free room and board.
+:::
+:::
+
+
+## Description of Roles
+
+***CEO***: Managing the company and ensuring we achieve the company’s goals and please our investors and stockholders
+
+    - Supervise direction business operations and the direction it is taking
+    
+    - Overviews looks over everything
+
+***Marketing Leader***: Leader of the marketing team to ensure our product has enough discovery and coverage
+
+    - Manages the direction of the product
+    
+    - Leads marketing team to ensure product discovery is at peak efficiency 
+
+    - Collaboration follows with making sure the teams work together as well checking over progress
+
+***Financial Officer***: Constant gambling, the only reason the business is still running is because of its reliance of human work and the workers just being fine with the -1$ an hour pay
+
+***Product Design Leader***: Produces ideas or updates for new or existing products
+
+    - Manages the businesses investments and money to ensure we don’t go “broke”
+
+        - Doesn't do his job
+
+            - Does Tax Evasion
+
+                - Throws Kids at IRS
+
+    - Creates the idea for products for manufacturing to gain more profit
+
+    - The companies ability to create the product relies on this roles ability to manage finances
+
+    - Gives the design to manufacturing supervisor for them to manufacture
+
+***Manufacturing Supervisor***: Ensures all products function within margin of error and sends them off for customers
+
+***Operation Director***: Makes sure thing are actually working
+
+***Wage Slave***: He works for -1$ hourly, has to pay to work in company, does all the work though
+
+

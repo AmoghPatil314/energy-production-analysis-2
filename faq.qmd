@@ -1,0 +1,165 @@
+---
+title: "Entertainment Company"
+format: html
+engine: knitr
+---
+
+# FAQ
+
+Welcome to our FAQ! Here we will answer some of our most popular questions:
+
+<details>
+<summary>Q: Why Should you buy our product</summary>
+
+A: Our product is the best.
+
+</details>
+
+<details>
+<summary>Q: Why did we make this product</summary>
+
+A: For fun and spying on customers thoughts.
+
+
+</details>
+
+<details>
+<summary>Q: How do we produce this product with penguins as employees</summary>
+
+A: The penguins use our product allowing them to use non existant fingers that are four dimensional.
+
+
+</details>
+
+<details>
+<summary>Q: Here's why we only have 1 Human Employee</summary>
+
+A: The 1 human employee really wanted to work for us because he liked the idea a lot.
+
+
+</details>
+
+<details>
+<summary>Q: Why does Amogh have to pay money to you guys to work there</summary>
+
+A: He really wanted to work for us so we made him pay to work for us and now he is in debt every couple of years until he gets his actual salary ($5k every 2 years) (also this actually is a better deal than most companies because he barely has to pay anything for rent and food).
+
+
+</details>
+
+<details>
+<summary>Q: What is our cult </summary>
+
+A: What Cult?
+
+
+</details>
+
+<details>
+<summary>Q: How does your product work</summary>
+
+A: It just works and if it doesn't then thats a skill issue.
+
+
+</details>
+
+<details>
+<summary>Q: What does your business provide?</summary>
+
+A: Jargon Translator
+
+</details>
+
+<details>
+<summary>Q: Who are your main customers?</summary>
+
+A:
+- Out of touch people  
+- Elderly  
+- Less than subpar intelligent people  
+- Deaf people
+
+</details>
+
+<details>
+<summary>Q: How do you communicate with your customers?</summary>
+
+A:
+- Email  
+- Home phone number  
+- Mail  
+- Our products once they own and register them with consent
+
+</details>
+
+<details>
+<summary>Q: How do you ensure quality?</summary>
+
+A: We have a manufacturing supervisor to look over the production and examine the product’s health and determine if they follow code regulations.
+
+</details>
+
+<details>
+<summary>Q: What are your operating costs?</summary>
+
+A:
+- Chip manufacturing total – $500,000  
+- Surgeon Training – $250,000  
+- Yearly Certification – $5,000  
+- Renting land for facilities – $0  
+- Facility maintenance – $5,000  
+- Radio production – $5,000  
+- Earpiece production – $2,500  
+- Book production – $50  
+- Mining – $150  
+- Charity – $1,000,000
+
+</details>
+
+<details>
+<summary>Q: What is your projected revenue for a given period?</summary>
+
+A:  
+**After Translator Company:**  
+- Yearly: $1,250,000,000  
+- Monthly: $104,166,666  
+
+**Before:**  
+- Yearly: $945,000,000  
+- Monthly: $78,750,000
+
+</details>
+
+<details>
+<summary>Q: What are the roles in your company, and who fills them?</summary>
+
+A:
+- **Kevin:** CEO, Marketing Leader  
+- **Amogh:** Manufacturing Supervisor, Operations Director, Low Level “Wage Slave”  
+- **Oliver:** Financial Officer, Product Design Leader  
+- **HVAC Maintainer:** Greg. We aren’t sure if he’s real anymore
+
+</details>
+
+<details>
+<summary>Q: How do your team members interact (internally and externally)?</summary>
+
+A:
+- Violence and confusion with how we coordinate the team  
+- Group gambling  
+- Finance officer ends up sacrificing a bunch of employees to Jargon god to ensure manufacturing & the products are released in the best quality there is
+
+</details>
+
+<details>
+<summary>Q: How will you grow and maintain your customer base?</summary>
+
+A:
+- We give insurance both life and product  
+- We also have the marketing team and often sell our products on special store shelves usually reserved  
+- We donate to help the surrounding neighborhood  
+- We have a cult (of reese and children)  
+- diddy
+
+</details>
+

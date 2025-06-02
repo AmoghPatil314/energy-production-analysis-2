@@ -9,7 +9,8 @@ website:
         text: Home
       - about.qmd
       - sources.qmd
-      - ent_companny.qmd
+      - ent_company.qmd
+      - team.qmd
 
 format:
   html:

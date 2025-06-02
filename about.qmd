@@ -1,5 +1,9 @@
 ---
 title: "Translator Company"
+format: html
+engine: knitr
 ---
 
-Helps translate stuff
+Helps translate stuff.
+
+Child company of Jargon Company. Recently Acquired. Information moved to main page.

@@ -1,6 +1,47 @@
 ---
 title: "Entertainment Company"
 format: html
+engine: knitr
 ---
 
-Helps manufacture devices and develop services for entertainment
+Helps manufacture devices and develop services for entertainment.
+
+More info coming soon.
+
+```{r, echo=FALSE,warning=FALSE}
+cat("\n\n\n")
+```
+
+
+```{r, echo=FALSE,warning=FALSE}
+
+#lamenting<-power_data|>
+#  ggplot(aes(x=primary_fuel,fill=primary_fuel))+
+#  geom_bar(color="black")+
+#  labs(title= NULL, y= NULL, x= NULL,fill="Type")+
+#  theme(axis.ticks = element_blank(),
+#        axis.text.x = element_blank(),
+#        legend.position = "bottom")+
+#  scale_y_continuous(labels=scales::comma_format())
+
+#plot_ly(power_data,x=~primary_fuel,fill=~primary_fuel,type='histogram')|>
+    #layout(title = "Histogram of Discrete X Values", 
+         #xaxis = list(title = "Fuel type"), 
+         #yaxis = list(title = "Count"))
+#ggplotly(lamenting)
+cat("\n\n\n")
+```
+
+
+```{r,echo=FALSE,warning=FALSE}
+#cheezit<-power_data|>
+#  ggplot(aes(x=estimated_generation_gwh_2017,y=primary_fuel,color=estimated_generation_gwh_2017))+
+#  geom_quasirandom(alpha = 0.7, size = 0.5,orientation = 'y')+
+#  scale_color_viridis_c(option = "plasma", direction = -1)+
+#  labs(title= NULL, y= NULL, x= NULL,color= NULL)+
+#  theme(axis.ticks = element_blank(),
+#        axis.text.x = element_blank(),
+#        legend.position = "bottom")+
+#  scale_x_continuous(labels=scales::comma_format())
+#ggplotly(cheezit)
+```

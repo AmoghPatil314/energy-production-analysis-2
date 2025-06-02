@@ -8,7 +8,10 @@ format:
     toc: true
 engine: knitr
 ---
+<div style="font-size:2px;">
 (from this point onward, the use of "jargon words" is reserved for words of any kind/language that the user cannot currently understand)
+</div>
+
 
 Here at Jargon Co., we aim to provide top-notch service to our customers. Below, you can see our current products:
 
@@ -48,8 +51,8 @@ types <- unique(power_data$type)
 
 ## The Book
 A book that contains all currently known and used jargon words.
-Price:$[price]. 
-Contains a subscription package - for an extra $[price] a month, you can have a live translator constantly o call with you, whenever you may require it!
+Price:$40. 
+Contains a subscription package - for an extra $100 an hour, you can have a live translator constantly on call with you, whenever you may require it!
 
 ```{r, echo = FALSE, warning = FALSE}
 # Load package
@@ -73,7 +76,7 @@ cat("\n\n\n")
 
 ## The Watch
 A Watch that activly translates jargon words. 
-Price:$[price]
+Price:$350
 
 
 ```{r, echo = FALSE, warning = FALSE}
@@ -88,7 +91,7 @@ cat("\n\n\n")
 
 ## The Earpiece
 A Earpiece that actively translates and speaks jargon words to you. 
-Price:$[price]
+Price:$250
 
 
 ```{r, echo = FALSE, warning = FALSE}
@@ -103,8 +106,8 @@ cat("\n\n\n")
 
 ## The Chip
 A Chip that is surgically implanted into your brain/scalp. Actively translates jargon words, along with providing definitions, meanings, and helping translate your own words into jargon. 
-Price:$[price] not including surgery. 
-Surgery costs depend per location.
+Price:$4,565 not including surgery. 
+Surgery costs depend per location (average estimates to be around $2,500).
 
 ```{r, echo = FALSE, warning = FALSE}
 chip <- readOBJ("./data/chip.obj")
@@ -215,43 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <button onclick="updatePlot()">Update Plot</button>
 <div id="plotly-div"></div>
 
-```{r, echo=FALSE,warning=FALSE}
-cat("\n\n\n")
-```
-As we can see, there are many power plants in the world. This next plot illustrates that, by showing how many of each type there are.
 
-```{r, echo=FALSE,warning=FALSE}
-
-#lamenting<-power_data|>
-#  ggplot(aes(x=primary_fuel,fill=primary_fuel))+
-#  geom_bar(color="black")+
-#  labs(title= NULL, y= NULL, x= NULL,fill="Type")+
-#  theme(axis.ticks = element_blank(),
-#        axis.text.x = element_blank(),
-#        legend.position = "bottom")+
-#  scale_y_continuous(labels=scales::comma_format())
-
-#plot_ly(power_data,x=~primary_fuel,fill=~primary_fuel,type='histogram')|>
-    #layout(title = "Histogram of Discrete X Values", 
-         #xaxis = list(title = "Fuel type"), 
-         #yaxis = list(title = "Count"))
-#ggplotly(lamenting)
-cat("\n\n\n")
-```
-
-
-```{r,echo=FALSE,warning=FALSE}
-#cheezit<-power_data|>
-#  ggplot(aes(x=estimated_generation_gwh_2017,y=primary_fuel,color=estimated_generation_gwh_2017))+
-#  geom_quasirandom(alpha = 0.7, size = 0.5,orientation = 'y')+
-#  scale_color_viridis_c(option = "plasma", direction = -1)+
-#  labs(title= NULL, y= NULL, x= NULL,color= NULL)+
-#  theme(axis.ticks = element_blank(),
-#        axis.text.x = element_blank(),
-#        legend.position = "bottom")+
-#  scale_x_continuous(labels=scales::comma_format())
-#ggplotly(cheezit)
-```
 
 
 
