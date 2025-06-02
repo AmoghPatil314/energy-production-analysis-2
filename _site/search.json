@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "team.html",
+    "href": "team.html",
+    "title": "Meet Our Team",
+    "section": "",
+    "text": "CEO, Marketing Leader\n\n\n\n\n\n\n\n\n\n\n\n\nFinancial Officer, Product Design Leader\n\n\n\nManufacturing Supervisor, Operations Director, Low Level “Wage Slave”, Website Designer\n\n\n\n\n\n\n\n\n\nBorn in southern Columbus, Ohio. Went to MIT before deciding to travel. Got hired by Jargon Co. Forced to become a wage slave. Work for a salary of $-1 a day for free room and board."
+  },
+  {
+    "objectID": "team.html#description-of-roles",
+    "href": "team.html#description-of-roles",
+    "title": "Meet Our Team",
+    "section": "Description of Roles",
+    "text": "Description of Roles\nCEO: Managing the company and ensuring we achieve the company’s goals and please our investors and stockholders\n- Supervise direction business operations and the direction it is taking\n\n- Overviews looks over everything\nMarketing Leader: Leader of the marketing team to ensure our product has enough discovery and coverage\n- Manages the direction of the product\n\n- Leads marketing team to ensure product discovery is at peak efficiency \n\n- Collaboration follows with making sure the teams work together as well checking over progress\nFinancial Officer: Constant gambling, the only reason the business is still running is because of its reliance of human work and the workers just being fine with the -1$ an hour pay\nProduct Design Leader: Produces ideas or updates for new or existing products\n- Manages the businesses investments and money to ensure we don’t go “broke”\n\n    - Doesn't do his job\n\n        - Does Tax Evasion\n\n            - Throws Kids at IRS\n\n- Creates the idea for products for manufacturing to gain more profit\n\n- The companies ability to create the product relies on this roles ability to manage finances\n\n- Gives the design to manufacturing supervisor for them to manufacture\nManufacturing Supervisor: Ensures all products function within margin of error and sends them off for customers\nOperation Director: Makes sure thing are actually working\nWage Slave: He works for -1$ hourly, has to pay to work in company, does all the work though"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
@@ -7,32 +21,11 @@
     "text": "(from this point onward, the use of “jargon words” is reserved for words of any kind/language that the user cannot currently understand)\nHere at Jargon Co., we aim to provide top-notch service to our customers. Below, you can see our current products:"
   },
   {
-    "objectID": "index.html#power-plant-distribution",
-    "href": "index.html#power-plant-distribution",
-    "title": "Home",
-    "section": "Power Plant Distribution",
-    "text": "Power Plant Distribution\nThis map show the locations, names, and power generation capabitities of each power plant in this data set. This map can be used to analyze the site factors for a good power plant.\nUse the inputs below to filter the data and update the map:\n\n\n\n All Book Watch Earpods Chip  Update Plot\n\n\n\nAs we can see, there are many power plants in the world. This next plot illustrates that, by showing how many of each type there are.\nWe can also see what plants generate the most power, as illustrated by the next plot:\n\n\nwgl \n  1 \n\n\n\n\n\n\nwgl \n  2 \n\n\n\n\n\n\nwgl \n  3 \n\n\n\n\n\n\nwgl \n  4"
-  },
-  {
-    "objectID": "sources.html",
-    "href": "sources.html",
-    "title": "Reality Company",
-    "section": "",
-    "text": "Manufactures devices and scientific instruments able to warp the seams of reality"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Translator Company",
-    "section": "",
-    "text": "Helps translate stuff"
-  },
-  {
     "objectID": "index.html#the-book",
     "href": "index.html#the-book",
     "title": "Home",
     "section": "The Book",
-    "text": "The Book\nA book that contains all currently known and used jargon words. Price:$40. Contains a subscription package - for an extra $100 an hour, you can have a live translator constantly o call with you, whenever you may require it!\n\n\nwgl \n  1"
+    "text": "The Book\nA book that contains all currently known and used jargon words. Price:$40. Contains a subscription package - for an extra $100 an hour, you can have a live translator constantly on call with you, whenever you may require it!\n\n\nwgl \n  1"
   },
   {
     "objectID": "index.html#the-watch",
@@ -63,18 +56,18 @@
     "text": "Map\nLocations of different Jargon Co. products in the world. Can be filtered.\n\n\n\n All Book Watch Earpods Chip  Update Plot"
   },
   {
-    "objectID": "team.html",
-    "href": "team.html",
-    "title": "Meet Our Team",
-    "section": "",
-    "text": "CEO, Marketing Leader\n\n\n\n\n\n\n\n\n\n\n\n\nFinancial Officer, Product Design Leader\n\n\n\nManufacturing Supervisor, Operations Director, Low Level “Wage Slave”, Website Designer\n\n\n\n\n\n\n\n\n\nBorn in southern Columbus, Ohio. Went to MIT before deciding to travel. Got hired by Jargon Co. Forced to become a wage slave. Work for a salary of $-1 a day for free room and board."
-  },
-  {
     "objectID": "ent_company.html",
     "href": "ent_company.html",
     "title": "Entertainment Company",
     "section": "",
-    "text": "Helps manufacture devices and develop services for entertainment"
+    "text": "Helps manufacture devices and develop services for entertainment.\nMore info coming soon."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Translator Company",
+    "section": "",
+    "text": "Helps translate stuff.\nChild company of Jargon Company. Recently Acquired. Information moved to main page."
   },
   {
     "objectID": "faq.html",
@@ -84,10 +77,10 @@
     "text": "Welcome to our FAQ! Here we will answer some of our most popular questions:\n\n\nQ: Why Should you buy our product\n\nA: Our product is the best.\n\n\n\nQ: Why did we make this product\n\nA: For fun and spying on customers thoughts.\n\n\n\nQ: How do we produce this product with penguins as employees\n\nA: The penguins use our product allowing them to use non existant fingers that are four dimensional.\n\n\n\nQ: Here’s why we only have 1 Human Employee\n\nA: The 1 human employee really wanted to work for us because he liked the idea a lot.\n\n\n\nQ: Why does Amogh have to pay money to you guys to work there\n\nA: He really wanted to work for us so we made him pay to work for us and now he is in debt every couple of years until he gets his actual salary ($5k every 2 years) (also this actually is a better deal than most companies because he barely has to pay anything for rent and food).\n\n\n\nQ: What is our cult\n\nA: What Cult?\n\n\n\nQ: How does your product work\n\nA: It just works and if it doesn’t then thats a skill issue.\n\n\n\nQ: What does your business provide?\n\nA: Jargon Translator\n\n\n\nQ: Who are your main customers?\n\nA: - Out of touch people\n- Elderly\n- Less than subpar intelligent people\n- Deaf people\n\n\n\nQ: How do you communicate with your customers?\n\nA: - Email\n- Home phone number\n- Mail\n- Our products once they own and register them with consent\n\n\n\nQ: How do you ensure quality?\n\nA: We have a manufacturing supervisor to look over the production and examine the product’s health and determine if they follow code regulations.\n\n\n\nQ: What are your operating costs?\n\nA: - Chip manufacturing total – $500,000\n- Surgeon Training – $250,000\n- Yearly Certification – $5,000\n- Renting land for facilities – $0\n- Facility maintenance – $5,000\n- Radio production – $5,000\n- Earpiece production – $2,500\n- Book production – $50\n- Mining – $150\n- Charity – $1,000,000\n\n\n\nQ: What is your projected revenue for a given period?\n\nA:\nAfter Translator Company:\n- Yearly: $1,250,000,000\n- Monthly: $104,166,666\nBefore:\n- Yearly: $945,000,000\n- Monthly: $78,750,000\n\n\n\nQ: What are the roles in your company, and who fills them?\n\nA: - Kevin: CEO, Marketing Leader\n- Amogh: Manufacturing Supervisor, Operations Director, Low Level “Wage Slave”\n- Oliver: Financial Officer, Product Design Leader\n- HVAC Maintainer: Greg. We aren’t sure if he’s real anymore\n\n\n\nQ: How do your team members interact (internally and externally)?\n\nA: - Violence and confusion with how we coordinate the team\n- Group gambling\n- Finance officer ends up sacrificing a bunch of employees to Jargon god to ensure manufacturing & the products are released in the best quality there is\n\n\n\nQ: How will you grow and maintain your customer base?\n\nA: - We give insurance both life and product\n- We also have the marketing team and often sell our products on special store shelves usually reserved\n- We donate to help the surrounding neighborhood\n- We have a cult (of reese and children)\n- diddy\n\n\n\nQ: Github for this website?\n\nA: Github"
   },
   {
-    "objectID": "team.html#description-of-roles",
-    "href": "team.html#description-of-roles",
-    "title": "Meet Our Team",
-    "section": "Description of Roles",
-    "text": "Description of Roles\nCEO: Managing the company and ensuring we achieve the company’s goals and please our investors and stockholders\n- Supervise direction business operations and the direction it is taking\n\n- Overviews looks over everything\nMarketing Leader: Leader of the marketing team to ensure our product has enough discovery and coverage\n- Manages the direction of the product\n\n- Leads marketing team to ensure product discovery is at peak efficiency \n\n- Collaboration follows with making sure the teams work together as well checking over progress\nFinancial Officer: Constant gambling, the only reason the business is still running is because of its reliance of human work and the workers just being fine with the -1$ an hour pay\nProduct Design Leader: Produces ideas or updates for new or existing products\n- Manages the businesses investments and money to ensure we don’t go “broke”\n\n    - Doesn't do his job\n\n        - Does Tax Evasion\n\n            - Throws Kids at IRS\n\n- Creates the idea for products for manufacturing to gain more profit\n\n- The companies ability to create the product relies on this roles ability to manage finances\n\n- Gives the design to manufacturing supervisor for them to manufacture\nManufacturing Supervisor: Ensures all products function within margin of error and sends them off for customers\nOperation Director: Makes sure thing are actually working\nWage Slave: He works for -1$ hourly, has to pay to work in company, does all the work though"
+    "objectID": "sources.html",
+    "href": "sources.html",
+    "title": "Reality Company",
+    "section": "",
+    "text": "Manufactures devices and scientific instruments able to warp the seams of reality"
   }
 ]
