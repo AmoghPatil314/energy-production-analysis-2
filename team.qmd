@@ -12,7 +12,7 @@ engine: knitr
 knitr::include_graphics("./data/Kevin_image.jpg")
 ```
 
-Born in Vietnam, Ho Chi Minh City. After starting small businesses providing small services, the Jargon Company ™ was created as an effort to improve on and innovate on services that the common person could benefit from. Going strong for 5 years the Jargon company has generated millions in revenue and has been branching off into other private ventures using subsidiary companies.
+Born in Vietnam, Ho Chi Minh City. After starting small businesses providing small services, the Jargon Company ™ was created as an effort to improve on and innovate on services that the common person could benefit from. Going strong for 5 years the Jargon company has generated millions in revenue and has been branching off into other private ventures using subsidiary companies. 
 
 :::
 ::: {.g-col-4}

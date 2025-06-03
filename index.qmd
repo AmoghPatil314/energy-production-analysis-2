@@ -54,7 +54,7 @@ A book that contains all currently known and used jargon words.
 Price:$40. 
 Contains a subscription package - for an extra $100 an hour, you can have a live translator constantly on call with you, whenever you may require it!
 
-```{r, echo = FALSE, warning = FALSE}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Load package
 open3d()
 
@@ -79,7 +79,7 @@ A Watch that activly translates jargon words.
 Price:$350
 
 
-```{r, echo = FALSE, warning = FALSE}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 watch <- readOBJ("./data/watch.obj")
 open3d()
 shade3d(watch, color = "cyan4")
@@ -94,7 +94,7 @@ A Earpiece that actively translates and speaks jargon words to you.
 Price:$250
 
 
-```{r, echo = FALSE, warning = FALSE}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 earpiece <- readOBJ("./data/earpiece.obj")
 open3d()
 shade3d(earpiece, color = "darkorchid3")
@@ -109,7 +109,7 @@ A Chip that is surgically implanted into your brain/scalp. Actively translates j
 Price:$4,565 not including surgery. 
 Surgery costs depend per location (average estimates to be around $2,500).
 
-```{r, echo = FALSE, warning = FALSE}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 chip <- readOBJ("./data/chip.obj")
 open3d()
 shade3d(chip, color = "deeppink3")
